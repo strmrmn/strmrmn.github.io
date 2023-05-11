@@ -1,0 +1,240 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    }
+
+    .active {
+      background: rgba(255, 156, 91, 0.5);
+    }
+
+    .link, .link_active {
+      text-decoration: none;
+      /* color: #333;
+      transition: all 1s ease-out; */
+    }
+
+    /* .link:hover {
+      background-color: #ffdbdb8c;
+    } */
+
+    .container {
+        max-width: 730px;
+        width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      
+      .nav {
+        /* background: #fcca7e; */
+        background: rgba(255, 238, 88, 0.6);
+      }
+
+      .pull-right {
+        float: right !important;
+      }
+    
+      .nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+
+      .nav-pills > li > a {
+        border-radius: 4px;
+      }
+    
+      .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+      }
+
+      .jumbotron {
+        border-bottom: 0;
+        text-align: center;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        margin-bottom: 30px;
+        background-size: 1500px 1000px;
+        
+    }
+
+    .wrap {
+        width: auto;
+        height: auto;
+        text-align: center;
+      }
+
+      .map {
+        padding-top: 5%;
+        width: 1116px;
+        height: 700px;
+      }
+
+      .adress_form input, .adress_form textarea {
+        border-width: 0px 0px 2px 0px;
+        border-color: rgba(88, 88, 88, 0.719)(0, 0, 0);
+    }
+
+    input {
+        outline:none;
+    }
+
+    .adress_form {
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .adress_form input {
+        height: 20px;
+        width: 200px;
+        padding: 5px 8px;
+    }
+
+.line-1{
+    position: relative;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+  animation: typewriter 2.5s steps(44) 0s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.text-muted:hover {
+    transform: skew(-10deg);
+  }
+
+.footer {
+    padding-top: 5%;
+}
+
+.car{
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    animation: moving 10s linear -2s infinite;
+  }
+  .car:before {
+    content:"";
+    display:block;
+    animation: carmove 3.1s infinite linear;
+    background: url('https://i.stack.imgur.com/xWNOG.png') center/cover;
+    padding-top:45.25%;
+  }
+  
+  .weel{
+    animation: wheel 10s infinite -2s linear;
+    background: url('https://i.stack.imgur.com/0Osjx.png') center/cover;
+    position: absolute;
+    bottom:0.8%;
+    width: 14.15%;
+  }
+  .weel:before {
+     content:"";
+     display:block;
+     padding-top:100%;
+  }
+  .weel1{left: 14.5%;}
+  .weel2{right: 10%;}
+  
+  /*animations*/
+  @keyframes carmove{
+    0%{transform: translateY(0px);}
+    25%{transform: translateY(1px)}
+    29%{transform: translateY(2px)}
+    33%{transform: translateY(3px)}
+    47%{transform: translateY(0px)}
+    58%{transform: translateY(1px)}
+    62%{transform: translateY(2px)}
+    66%{transform: translateY(3px)}
+    75%{transform: translateY(1px)}
+    100%{transform: translateY(0px)}
+  }
+  
+  @keyframes wheel{
+   0%{
+     transform: rotate(0deg)
+    }
+    35% {
+      transform: rotate(-920deg)
+    }
+    36%,
+    56% {
+      transform: rotate(-920deg)
+    }
+   100%{
+     transform: rotate(-1440deg)
+    }
+  }
+  
+  @keyframes moving {
+    0% {
+      right: -80em;
+      animation-timing-function: ease-out;
+    }
+    35% {
+      right: 0;
+    }
+    36%,
+    56% {
+      right: 0;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      right: 120%;
+    }
+  }
+  
+  a.link, .link_active {
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+  }
+  a.link:hover {
+    color: #000 !important;
+    background-color: transparent;
+    text-shadow: nfour;
+  }
+  a.link:hover:before {
+    right: 0%;
+    left: auto;
+    width: 100%;
+  }
+  a.link:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #ff0000;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  }
